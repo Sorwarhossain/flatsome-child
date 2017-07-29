@@ -88,6 +88,41 @@ body.single-product .footer-widgets.footer.footer-2 {
 }
 
 
+/*Checkout page*/
+h3.bill_title span {
+    background-color: #0896f0;
+    color: #fff;
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    padding: 12px 8px;
+    line-height: 0px;
+    font-size: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.place-order input#place_order {
+    width: 100%;
+    background-color: #bc9874;
+}
+
+select[name="woocommerce-currency-switcher"] {
+	padding-right: 20px !important;
+}
+
+/*.dd-select {
+    background-color: transparent !important;
+    height: 34px;
+}
+a.dd-selected img {
+    display: none;
+}
+small.dd-selected-description {
+    display: none;
+}
+
+*/
+
 
 
 
