@@ -23,11 +23,17 @@ if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
-<div id="payment" class="woocommerce-checkout-payment">
+<div id="cus_payment" class="cus_woocommerce-checkout-payment">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
-		<ul class="wc_payment_methods payment_methods methods">
+		<div id="responsivePaymentTabs" class="cus_wc_payment_methods cus_payment_methods cus_methods">
+		
 			<?php
 				if ( ! empty( $available_gateways ) ) {
+					echo "<ul>";
+					foreach ( $available_gateways as $gateway ) {
+						echo '<li><a href="#payment_tab_'. $gateway->id .'">'. $gateway->get_title() .'</a></li>';
+					}
+					echo "</ul>";
 					foreach ( $available_gateways as $gateway ) {
 						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 					}
@@ -35,12 +41,12 @@ if ( ! is_ajax() ) {
 					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? __( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : __( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</li>';
 				}
 			?>
-		</ul>
+		</div>
 	<?php endif; ?>
 
 
 
-	
+
 </div>
 <?php
 if ( ! is_ajax() ) {

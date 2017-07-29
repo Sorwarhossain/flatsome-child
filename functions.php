@@ -7,12 +7,14 @@ add_action( 'custom_payment_methods_replacement', 'woocommerce_checkout_payment'
 
 
 
-add_filter( 'gettext', 'ld_custom_checkout_button_text', 20, 3 );
-function ld_custom_checkout_button_text( $translated_text, $text, $domain ) {
-    switch ( $translated_text ) {
-    case 'Proceed to PayPal' :
-    $translated_text = __( 'Complete Purchase', 'woocommerce' );
-    break;
-}
-return $translated_text;
+
+add_action( 'wp_enqueue_scripts', 'child_checkout_enqueue_script' );
+function child_checkout_enqueue_script(){
+	if( is_checkout()){
+		wp_register_style('responsive-tabs', get_stylesheet_directory_uri().'/css/responsive-tabs.css');
+		wp_enqueue_style('responsive-tabs');
+
+		wp_enqueue_script('responsiveTabs', get_stylesheet_directory_uri().'/js/jquery.responsiveTabs.min.js', array('jquery'), '1.0', true);
+	}
+	wp_enqueue_script('child-custom-js', get_stylesheet_directory_uri().'/js/custom.js', array('jquery'), '1.0', true);
 }
