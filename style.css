@@ -1,0 +1,102 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+#footer ul#menu-secondary-1 {
+    font-size: 11px;
+}
+#footer ul.links li {
+    margin: 0 0.3em;
+    display: inline-block;
+}
+.contact_bottom {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 60px;
+}
+body.single-product .related-products-wrapper {
+	display: none;
+}
+body.single-product .product_meta {
+	display: none;
+}
+body.single-product .social-icons.share-icons {
+	display: none;
+}
+body.single-product .woocommerce-tabs.tabbed-content {
+	display: none;
+}
+body.single-product .footer-widgets.footer.footer-2 {
+	display: none;
+}
+.my-account-header.page-title {
+    background-color: #f7f7f9;
+    border: none;
+}
+.page-wrapper.my-account {
+    background-color: #f7f7f9;
+    color: #222;
+}
+.page-wrapper.my-account a{
+	color: #222;
+}
+.my-account-header .page-title-inner h1 {
+    margin-top: 15px;
+    color: #222222;
+}
+.woocommerce-MyAccount-content .dashboard-links a {
+    background-color: #fff;
+    border-radius: 0;
+    margin-right: -1px;
+}
+.woocommerce-MyAccount-content .dashboard-links a:hover {
+    background-color: #f3f3f3;
+}
+.woocommerce-MyAccount-content .dashboard-links {
+    margin-top: 50px;
+}
+.account-login-inner > h3,
+.account-register-inner > h3 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.account-login-inner .login {
+    background-color: white;
+    padding: 20px;
+}
+.account-register-inner .register{
+	padding-top: 20px;
+}
+.account-login-inner input.woocommerce-Button.button,
+.account-register-inner input.woocommerce-Button.button {
+    width: 100%;
+    background-color: #bc9874;
+}
+.account-register-inner input.woocommerce-Button.button {
+    width: 100%;
+    background-color: #000000;
+}
+.login-form-popup .lightbox-content .lightbox-inner {
+    padding: 30px 20px;
+    background-color: #F7f7f7;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 48em) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
+
+
+}
+
+Extra Small | Small | Medium | Large | Extra Large
