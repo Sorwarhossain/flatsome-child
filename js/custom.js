@@ -6,6 +6,4 @@
 	});
 
 
-	document.getElementById('place_order').value = 'Complete Purchase';
-
 }(jQuery));
