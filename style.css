@@ -1,9 +1,9 @@
 /*
 Theme Name: Flatsome Child
 Description: This is a child theme for Flatsome Theme
-Author: UX Themes
+Author: Hyper Coder
 Template: flatsome
-Version: 3.0
+Version: 1.0
 */
 
 /*************** ADD CUSTOM CSS HERE.   ***************/
@@ -101,7 +101,7 @@ h3.bill_title span {
     border-radius: 50%;
     margin-right: 10px;
 }
-.place-order input#place_order {
+.place-order input#place_order_cus {
     width: 100%;
     background-color: #bc9874;
 }
@@ -167,7 +167,11 @@ h3.bill_title {
 
 
 
-
+.payment_method_title {
+    font-size: .9em !important;
+    color: #222;
+    text-transform: capitalize !important;
+}
 
 
 @media only screen and (max-width: 48em) {
