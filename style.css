@@ -24,9 +24,9 @@ body.single-product .related-products-wrapper {
 body.single-product .product_meta {
 	display: none;
 }
-body.single-product .social-icons.share-icons {
-	display: none;
-}
+/* body.single-product .social-icons.share-icons {
+    display: none;
+} */
 body.single-product .woocommerce-tabs.tabbed-content {
 	display: none;
 }
