@@ -187,6 +187,9 @@ td.order-actions a {
 .woocommerce-orders-table__cell-order-actions a {
     color: #fff !important;
 }
+.touch-scroll-table {
+    margin-top: 50px;
+}
 
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
