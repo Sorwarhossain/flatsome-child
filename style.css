@@ -190,7 +190,53 @@ td.order-actions a {
 .touch-scroll-table {
     margin-top: 50px;
 }
-
+/*Single Order Page CSS*/
+.single-order-title {
+    background-color: #dedede;
+    padding: 20px;
+}
+.single-order-title mark {
+    padding: 5px;
+}
+.row.order_details {
+    margin-bottom: 40px;
+}
+.row.order_details h3 {
+    border-bottom: 1px solid #5A5555;
+    padding-bottom: 10px;
+}
+.row.border_bottom_1,
+.row.border_bottom_0 {
+    margin: 0 !important;
+}
+.border_bottom_1 .col {
+    border-bottom: 1px solid #5A5555;
+}
+.row.border_bottom_1 {
+    margin: 0 !important;
+}
+.row.border_bottom_1 {
+    padding-bottom: 30px;
+}
+.row.border_bottom_1 .col {
+    padding-bottom: 15px;
+}
+.product_price {
+    text-align: right;
+}
+.order_products_bottom.border_bottom_0 {
+    text-align: right;
+}
+.order_products_bottom .col {
+    padding-bottom: 10px;
+}
+.order_products_bottom .label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.product_price_title {
+    text-align: right;
+}
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
 

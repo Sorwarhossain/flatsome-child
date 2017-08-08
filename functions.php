@@ -60,5 +60,7 @@ function woocommerce_account_create(){
 <?php } // end of woocommerce_account_create
 
 
-
-
+function reduce_woocommerce_min_strength_requirement( $strength ) {
+    return 1;
+}
+add_filter( 'woocommerce_min_password_strength', 'reduce_woocommerce_min_strength_requirement' );

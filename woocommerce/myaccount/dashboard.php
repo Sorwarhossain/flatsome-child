@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php 
 
-include('my-orders.php');
+include('dashboard-my-orders.php');
 
 
 
