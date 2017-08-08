@@ -59,3 +59,8 @@ function woocommerce_account_create(){
 
 <?php } // end of woocommerce_account_create
 
+
+
+
+add_filter( 'wpcf7_validate_configuration', '__return_false' );
+
