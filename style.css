@@ -237,6 +237,10 @@ td.order-actions a {
 .product_price_title {
     text-align: right;
 }
+small.woocommerce-password-hint {
+    display: none;
+}
+
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
 
