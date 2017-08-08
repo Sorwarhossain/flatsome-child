@@ -184,6 +184,9 @@ td.order-actions a {
 .my-account .woocommerce-info a {
     color: #fff;
 }
+.page-wrapper.my-account a {
+    color: #fff;
+}
 
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
