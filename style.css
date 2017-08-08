@@ -117,7 +117,7 @@ h3.bill_title {
 .woocommerce-additional-fields__field-wrapper label,
 .woocommerce-checkout-payment label {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 13px;
 }
 .woocommerce-checkout .r-tabs {
     background-color: transparent;
@@ -164,15 +164,23 @@ h3.bill_title {
 .woocommerce-checkout .r-tabs-panel {
     padding: 29px 20px !important;
 }
-
-
-
 .payment_method_title {
     font-size: .9em !important;
     color: #222;
     text-transform: capitalize !important;
 }
-
+.woocommerce-billing-fields__field-wrapper p {
+    margin-bottom: 15px;
+}
+.woocommerce-billing-fields__field-wrapper input{
+    margin-bottom: 0;
+}
+.create-account {
+    margin-top: 50px;
+}
+td.order-actions a {
+    color: #fff !important;
+}
 
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
