@@ -184,7 +184,7 @@ td.order-actions a {
 .my-account .woocommerce-info a {
     color: #fff;
 }
-.page-wrapper.my-account a {
+.woocommerce-orders-table__cell-order-actions a {
     color: #fff;
 }
 
