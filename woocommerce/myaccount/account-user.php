@@ -10,7 +10,6 @@
 		<?php 
 			echo $current_user->display_name;
 		?>
-		<em class="user-id op-5"><?php echo '#'.$user_id;?></em>
 	</span>
 
 	<?php do_action('flatsome_after_account_user'); ?>
