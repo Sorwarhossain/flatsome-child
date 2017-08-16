@@ -248,3 +248,17 @@ small.woocommerce-password-hint {
 }
 
 
+
+
+/*Footer CSS*/
+.footer-secondary .footer-text {
+    display: block;
+    margin-bottom: 10px;
+    text-align: right;
+}
+a.social_icon {
+    width: 40px;
+    display: inline-block;
+}
+
+
