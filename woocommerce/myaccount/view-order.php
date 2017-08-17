@@ -23,15 +23,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<?php
+$carrier_name = get_post_meta( $order->get_id(), 'ywot_carrier_name', true );
+$pick_up_date = get_post_meta( $order->get_id(), 'ywot_pick_up_date', true );
+$tracking_code = get_post_meta( $order->get_id(), 'ywot_tracking_code', true );
+if($carrier_name or $pick_up_date or $tracking_code) :
+?>
+<p class="single-order-title"><?php
+	$output = 'Your order has been picked up';
+	if($carrier_name){
+		$output .= ' by <mark>' . $carrier_name . '</mark>';
+	} 
+	if($pick_up_date){
+		$output .= ' on <mark>' . $pick_up_date . '</mark>';
+	}
+	if($tracking_code){
+		$output .= ' and your track code is <mark>' . $tracking_code . '</mark>' . '.';
+	}
+	echo $output;
+?></p>
+<?php endif; ?>
+
+
 <p class="single-order-title"><?php
 	/* translators: 1: order number 2: order date 3: order status */
 	printf(
-		__( '<strong>Orders And Tracking</strong> : Order #%1$s was placed on %2$s and is currently %3$s.', 'woocommerce' ),
+		__( '<strong>Orders And Tracking</strong> : Order # %1$s was placed on %2$s and is currently %3$s.', 'woocommerce' ),
 		'<mark class="order-number">' . $order->get_order_number() . '</mark>',
 		'<mark class="order-date">' . wc_format_datetime( $order->get_date_created() ) . '</mark>',
 		'<mark class="order-status">' . wc_get_order_status_name( $order->get_status() ) . '</mark>'
 	);
 ?></p>
+
+
+
 
 <?php if ( $notes = $order->get_customer_order_notes() ) : ?>
 	<h2><?php _e( 'Order updates', 'woocommerce' ); ?></h2>
