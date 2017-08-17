@@ -27,10 +27,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 $carrier_name = get_post_meta( $order->get_id(), 'ywot_carrier_name', true );
 $pick_up_date = get_post_meta( $order->get_id(), 'ywot_pick_up_date', true );
 $tracking_code = get_post_meta( $order->get_id(), 'ywot_tracking_code', true );
+$picked_up = get_post_meta( $order->get_id(), 'ywot_picked_up', true );
 if($carrier_name or $pick_up_date or $tracking_code) :
 ?>
 <p class="single-order-title"><?php
-	$output = 'Your order has been picked up';
+	if($picked_up){
+		$output = 'Your order has been picked up';
+	} else {
+		$output = 'Your order will be picked up';
+	}
 	if($carrier_name){
 		$output .= ' by <mark>' . $carrier_name . '</mark>';
 	} 
