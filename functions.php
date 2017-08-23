@@ -72,8 +72,11 @@ add_action('wp_head', 'google_recapcha_script');
 function google_recapcha_script(){
 	echo '
  <script type="text/javascript">
-      var verifyCallback = function(response) {
-        alert(response);
+      var verifylogin = function(response) {
+        document.getElementById("woo_login").disabled = false;
+      };
+      var verifyregister = function(response) {
+        document.getElementById("woo_register").disabled = false;
       };
       var widgetId1;
       var widgetId2;
@@ -84,12 +87,12 @@ function google_recapcha_script(){
         widgetId1 = grecaptcha.render("login_recapcha", {
           "sitekey" : "6LcvBiwUAAAAAISJ2EW6RU62DBI6Whb0lmxZllk1",
           "theme" : "light",
-          "callback" : verifyCallback,
+          "callback" : verifylogin,
         });
         widgetId2 = grecaptcha.render("register_recapcha", {
           "sitekey" : "6LcvBiwUAAAAAISJ2EW6RU62DBI6Whb0lmxZllk1",
           "theme" : "light",
-          "callback" : verifyCallback,
+          "callback" : verifyregister,
         });
       };
     </script>

@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login' ); ?>
-				<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" />
+				<input type="submit" id="woo_login" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" disabled/>
 			</p>
 			<p class="form-row">
 				<label for="rememberme" class="inline">
@@ -119,7 +119,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="woocomerce-FormRow form-row">
 				<?php wp_nonce_field( 'woocommerce-register' ); ?>
-				<input type="submit" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
+				<input type="submit" id="woo_register" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" disabled/>
 			</p>
 
 
