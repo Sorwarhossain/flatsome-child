@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<h3 class="uppercase"><?php _e( 'Login', 'woocommerce' ); ?></h3>
 
-		<form method="post" class="login" action="javascript:alert(grecaptcha.getResponse(login_recapcha));">
+		<form method="post" class="login">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 			
@@ -84,7 +84,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<h3 class="uppercase"><?php _e( 'Register', 'woocommerce' ); ?></h3>
 
-		<form method="post" class="register" action="javascript:alert(grecaptcha.getResponse(register_recapcha));">
+		<form method="post" class="register">
 
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 

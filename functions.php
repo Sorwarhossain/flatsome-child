@@ -83,11 +83,13 @@ function google_recapcha_script(){
 
         widgetId1 = grecaptcha.render("login_recapcha", {
           "sitekey" : "6LcvBiwUAAAAAISJ2EW6RU62DBI6Whb0lmxZllk1",
-          "theme" : "light"
+          "theme" : "light",
+          "callback" : verifyCallback,
         });
         widgetId2 = grecaptcha.render("register_recapcha", {
           "sitekey" : "6LcvBiwUAAAAAISJ2EW6RU62DBI6Whb0lmxZllk1",
-          "theme" : "light"
+          "theme" : "light",
+          "callback" : verifyCallback,
         });
       };
     </script>
