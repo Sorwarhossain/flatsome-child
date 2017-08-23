@@ -86,7 +86,8 @@ body.single-product .footer-widgets.footer.footer-2 {
     padding: 30px 20px;
     background-color: #F7f7f7;
 }
-.g-recaptcha {
+#login_recapcha,
+#register_recapcha {
     margin-bottom: 20px;
 }
 

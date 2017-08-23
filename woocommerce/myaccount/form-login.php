@@ -68,6 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'woocommerce' ); ?></a>
 			</p>
 
+
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 		</form>
@@ -120,6 +121,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php wp_nonce_field( 'woocommerce-register' ); ?>
 				<input type="submit" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
 			</p>
+
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 

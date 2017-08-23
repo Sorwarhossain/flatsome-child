@@ -64,3 +64,59 @@ function reduce_woocommerce_min_strength_requirement( $strength ) {
     return 1;
 }
 add_filter( 'woocommerce_min_password_strength', 'reduce_woocommerce_min_strength_requirement' );
+
+
+
+//For google multiple reCapcha
+add_action('wp_head', 'google_recapcha_script');
+function google_recapcha_script(){
+	echo '
+ <script type="text/javascript">
+      var verifyCallback = function(response) {
+        alert(response);
+      };
+      var widgetId1;
+      var widgetId2;
+      var onloadCallback = function() {
+        // Renders the HTML element with id example1 as a reCAPTCHA widget.
+        // The id of the reCAPTCHA widget is assigned to widgetId1.
+
+        widgetId1 = grecaptcha.render("login_recapcha", {
+          "sitekey" : "6LcvBiwUAAAAAISJ2EW6RU62DBI6Whb0lmxZllk1",
+          "theme" : "light"
+        });
+        widgetId2 = grecaptcha.render("register_recapcha", {
+          "sitekey" : "6LcvBiwUAAAAAISJ2EW6RU62DBI6Whb0lmxZllk1",
+          "theme" : "light"
+        });
+      };
+    </script>
+
+
+	';
+}
+
+
+
+add_action('wp_footer', 'google_recapcha_footer_script');
+function google_recapcha_footer_script(){
+	echo '
+
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+	
+	';
+}
+
+add_action('woocommerce_login_form', 'recapcha_woocommerce_login_form');
+function recapcha_woocommerce_login_form(){
+	echo '<div id="login_recapcha"></div>';
+}
+
+add_action('woocommerce_register_form', 'recapcha_woocommerce_register_form');
+function recapcha_woocommerce_register_form(){
+	echo '<div id="register_recapcha"></div>';
+}
+
+
+
