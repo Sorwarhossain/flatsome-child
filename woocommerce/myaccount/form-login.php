@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login' ); ?>
-				<input type="submit" id="woo_login" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" disabled/>
+				<input type="submit" id="woo_login" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"/>
 			</p>
 			<p class="form-row">
 				<label for="rememberme" class="inline">
@@ -115,11 +115,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div style="<?php echo ( ( is_rtl() ) ? 'right' : 'left' ); ?>: -999em; position: absolute;"><label for="trap"><?php _e( 'Anti-spam', 'woocommerce' ); ?></label><input type="text" name="email_2" id="trap" tabindex="-1" /></div>
 
 			<?php do_action( 'woocommerce_register_form' ); ?>
-			<?php do_action( 'register_form' ); ?>
+			<?php //do_action( 'register_form' ); ?>
 
-			<p class="woocomerce-FormRow form-row">
+			<p class="woocomerce-FormRow form-row" disabled>
 				<?php wp_nonce_field( 'woocommerce-register' ); ?>
-				<input type="submit" id="woo_register" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" disabled/>
+				<input type="submit" id="woo_register" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
+
 			</p>
 
 
