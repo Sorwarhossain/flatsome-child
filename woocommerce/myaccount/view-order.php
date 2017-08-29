@@ -51,6 +51,16 @@ if($carrier_name or $pick_up_date or $tracking_code) :
 <?php endif; ?>
 
 
+<p class="single-order-title"><?php
+/* translators: 1: order number 2: order date 3: order status */
+printf(
+	__( '<strong>Orders And Tracking</strong> : Order # %1$s was placed on %2$s and is currently %3$s.', 'woocommerce' ),'<mark class="order-number">' . $order->get_order_number() . '</mark>',
+'<mark class="order-date">' . wc_format_datetime( $order->get_date_created() ) . '</mark>',
+'<mark class="order-status">' . wc_get_order_status_name( $order->get_status() ) . '</mark>');
+?></p>
+
+
+
 <?php if ( $notes = $order->get_customer_order_notes() ) : ?>
 	<h2><?php _e( 'Order updates', 'woocommerce' ); ?></h2>
 	<ol class="woocommerce-OrderUpdates commentlist notes">
