@@ -32,18 +32,18 @@ if($carrier_name or $pick_up_date or $tracking_code) :
 ?>
 <p class="single-order-title"><?php
 	if($picked_up){
-		$output = 'Your order has been picked up';
+		$output = 'Your order is shipped';
 	} else {
-		$output = 'Your order will be picked up';
+		$output = 'Your order will be shipped';
 	}
 	if($carrier_name){
-		$output .= ' by <mark>' . $carrier_name . '</mark>';
+		$output .= ' by <mark>"' . $carrier_name . '"</mark>';
 	} 
 	if($pick_up_date){
-		$output .= ' on <mark>' . $pick_up_date . '</mark>';
+		$output .= ' on <mark>"' . $pick_up_date . '"</mark>';
 	}
 	if($tracking_code){
-		$output .= ' and your track code is <mark>' . $tracking_code . '</mark>' . '.';
+		$output .= ' and your track code is <mark>"' . $tracking_code . '"</mark>' . '.';
 	}
 	echo $output;
 ?></p>
