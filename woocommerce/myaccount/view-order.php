@@ -44,7 +44,7 @@ if($carrier_name or $pick_up_date or $tracking_code) :
 		$output .= ' on <mark>"' . $pick_up_date . '"</mark>';
 	}
 	if($tracking_code){
-		$output .= ' and your track code is <mark>"' . $tracking_code . '"</mark>' . '.';
+		$output .= ' and your tracking number is <mark>"' . $tracking_code . '"</mark>' . '.';
 	}
 	echo $output;
 ?></p>
